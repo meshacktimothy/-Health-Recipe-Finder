@@ -1,95 +1,317 @@
-// // src/components/Dropdown.tsx
-// import React, { useEffect, useRef, useState } from "react";
-// import {
-//   Container,
-//   ToggleButton,
-//   DropdownList,
-//   Label,
-//   Input,
-//   ClearButton,
-// } from "./styles";
+import {
+  FoodContainer,
+  MediterraneanChickpeaDiv,
+  MediterraneanImage,
+  MediterraneanTextDiv,
+  HeadingText,
+  MediterraneanParagrah,
+  MediterraneanTextImgDiv,
+  ServingsContainer,
+  Servings2ImgDiv,
+  Servings2Text,
+  PrepAndServingDiv,
+  CookContainer,
+  MediterraneanChickpea,
+  MediterraneContainer,
+} from "./styles";
+import Servings2Img from "../../../assets/images/icon-servings.svg";
+import PrepTime from "../../../assets/images/icon-prep-time.svg";
+import Cook from "../../../assets/images/icon-cook-time.svg";
+import MediterraneanImg from "../../../assets/images/mediterranean-chickpea-salad-large.webp";
+import AvocadoImg from "../../../assets/images/avocado-tomato-wholegrain-toast-large.webp";
+import OnePan from "../../../assets/images/salmon-asparagus-large.webp";
+import QuinoaImg from "../../../assets/images/quinoa-veggie-bowl-large.webp";
+import SweetImg from "../../../assets/images/sweet-potato-tacos-large.webp";
+import GreekImg from "../../../assets/images/greek-yogurt-large.webp";
+import LentilImg from "../../../assets/images/lentil-soup-large.webp";
+import BananaImg from "../../../assets/images/banana-pancakes-large.webp";
+import { ViewRecipe } from "../../../components/Button/style";
+// import RecipesDetails from "../RecipesDetails";
+import { Route, Routes } from "react-router-dom";
+import ViewDetails from "../../RecipesDetails";
 
-// interface DropdownProps {
-//   label: string;
-//   options: string[];
-//   onSelect?: (value: string) => void; // optional callback to parent
-//   closeOnSelect?: boolean; // default true
-// }
+export default function FoodCode() {
+  return (
+    <FoodContainer>
+      <MediterraneContainer>
+        <MediterraneanChickpeaDiv>
+          <MediterraneanImage src={MediterraneanImg}></MediterraneanImage>
+          <MediterraneanTextDiv>
+            <HeadingText>Mediterranean Chickpea Salad</HeadingText>
+            <MediterraneanParagrah>
+              A refreshing, protein-packed salad tossed in a <br /> lemon-olive
+              oil dressing.
+              <MediterraneanTextImgDiv>
+                <PrepAndServingDiv>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <Servings2Img />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Servings: 2</Servings2Text>
+                  </ServingsContainer>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <PrepTime />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Prep: 10 mins</Servings2Text>
+                  </ServingsContainer>
+                </PrepAndServingDiv>
+                <CookContainer>
+                  <Servings2ImgDiv>
+                    <Cook />
+                  </Servings2ImgDiv>
+                  <Servings2Text>Cook: 0 min</Servings2Text>
+                </CookContainer>
+              </MediterraneanTextImgDiv>
+            </MediterraneanParagrah>
+            <ViewRecipe>View Recipe</ViewRecipe>
+          </MediterraneanTextDiv>
+        </MediterraneanChickpeaDiv>
 
-// export default function Dropdown({
-//   label,
-//   options,
-//   onSelect,
-//   closeOnSelect = true,
-// }: DropdownProps) {
-//   const [open, setOpen] = useState(false);
-//   const [selected, setSelected] = useState<string>("");
+        <MediterraneanChickpeaDiv>
+          <MediterraneanImage src={AvocadoImg}></MediterraneanImage>
+          <MediterraneanTextDiv>
+            <HeadingText>Avocado & Tomato Wholegrain Toastd</HeadingText>
+            <MediterraneanParagrah>
+              Creamy avocado spread over toasted wholegrain <br /> bread, topped
+              with juicy tomatoes.
+              <MediterraneanTextImgDiv>
+                <PrepAndServingDiv>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <Servings2Img />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Servings: 1</Servings2Text>
+                  </ServingsContainer>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <PrepTime />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Prep: 5 mins</Servings2Text>
+                  </ServingsContainer>
+                </PrepAndServingDiv>
+                <CookContainer>
+                  <Servings2ImgDiv>
+                    <Cook />
+                  </Servings2ImgDiv>
+                  <Servings2Text>Cook: 5 min</Servings2Text>
+                </CookContainer>
+              </MediterraneanTextImgDiv>
+            </MediterraneanParagrah>{" "}
+            <ViewRecipe>View Recipe</ViewRecipe>
+          </MediterraneanTextDiv>
+        </MediterraneanChickpeaDiv>
 
-//   // persistent unique name for the radio group so multiple dropdowns don't conflict
-//   const nameRef = useRef(
-//     `${label.replace(/\s+/g, "-").toLowerCase()}-${Math.random()
-//       .toString(36)
-//       .slice(2, 8)}`
-//   );
+        <MediterraneanChickpeaDiv>
+          <MediterraneanImage src={OnePan}></MediterraneanImage>
+          <MediterraneanTextDiv>
+            <HeadingText>
+              One-Pan Lemon Garlic Salmon with Asparagus
+            </HeadingText>
+            <MediterraneanParagrah>
+              A 15-minute weeknight dinner of flaky salmon <br /> and tender
+              asparagus.
+              <MediterraneanTextImgDiv>
+                <PrepAndServingDiv>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <Servings2Img />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Servings: 2</Servings2Text>
+                  </ServingsContainer>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <PrepTime />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Prep: 5 mins</Servings2Text>
+                  </ServingsContainer>
+                </PrepAndServingDiv>
+                <CookContainer>
+                  <Servings2ImgDiv>
+                    <Cook />
+                  </Servings2ImgDiv>
+                  <Servings2Text>Cook: 12 min</Servings2Text>
+                </CookContainer>
+              </MediterraneanTextImgDiv>
+            </MediterraneanParagrah>{" "}
+            <ViewRecipe>View Recipe</ViewRecipe>
+          </MediterraneanTextDiv>
+        </MediterraneanChickpeaDiv>
+      </MediterraneContainer>
 
-//   // ref used to detect outside clicks
-//   const containerRef = useRef<HTMLDivElement | null>(null);
+      <MediterraneContainer>
+        <MediterraneanChickpeaDiv>
+          <MediterraneanImage src={QuinoaImg}></MediterraneanImage>
+          <MediterraneanTextDiv>
+            <HeadingText>Quinoa Veggie Power Bowl</HeadingText>
+            <MediterraneanParagrah>
+              A balanced bowl of fluffy quinoa, roasted veggies <br /> and
+              healthy fats.
+              <MediterraneanTextImgDiv>
+                <PrepAndServingDiv>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <Servings2Img />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Servings: 2</Servings2Text>
+                  </ServingsContainer>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <PrepTime />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Prep: 10 mins</Servings2Text>
+                  </ServingsContainer>
+                </PrepAndServingDiv>
+                <CookContainer>
+                  <Servings2ImgDiv>
+                    <Cook />
+                  </Servings2ImgDiv>
+                  <Servings2Text>Cook: 15 min</Servings2Text>
+                </CookContainer>
+              </MediterraneanTextImgDiv>
+            </MediterraneanParagrah>{" "}
+            <ViewRecipe>View Recipe</ViewRecipe>
+          </MediterraneanTextDiv>
+        </MediterraneanChickpeaDiv>
 
-//   useEffect(() => {
-//     function handleClickOutside(e: MouseEvent) {
-//       if (
-//         containerRef.current &&
-//         !containerRef.current.contains(e.target as Node)
-//       ) {
-//         setOpen(false);
-//       }
-//     }
-//     function handleKey(e: KeyboardEvent) {
-//       if (e.key === "Escape") setOpen(false);
-//     }
-//     document.addEventListener("mousedown", handleClickOutside);
-//     document.addEventListener("keydown", handleKey);
-//     return () => {
-//       document.removeEventListener("mousedown", handleClickOutside);
-//       document.removeEventListener("keydown", handleKey);
-//     };
-//   }, []);
-//   // notify parent when selection changes
-//   useEffect(() => {
-//     if (onSelect) onSelect(selected);
-//   }, [selected, onSelect]);
+        <MediterraneanChickpeaDiv>
+          <MediterraneanImage src={SweetImg}></MediterraneanImage>
+          <MediterraneanTextDiv>
+            <HeadingText>Sweet Potato Black Bean Tacos</HeadingText>
+            <MediterraneanParagrah>
+              Smoky roasted sweet potatoes and black beans <br /> tucked into
+              warm tortillas.
+              <MediterraneanTextImgDiv>
+                <PrepAndServingDiv>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <Servings2Img />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Servings: 3</Servings2Text>
+                  </ServingsContainer>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <PrepTime />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Prep: 10 mins</Servings2Text>
+                  </ServingsContainer>
+                </PrepAndServingDiv>
+                <CookContainer>
+                  <Servings2ImgDiv>
+                    <Cook />
+                  </Servings2ImgDiv>
+                  <Servings2Text>Cook: 15 min</Servings2Text>
+                </CookContainer>
+              </MediterraneanTextImgDiv>
+            </MediterraneanParagrah>{" "}
+            <ViewRecipe>View Recipe</ViewRecipe>
+          </MediterraneanTextDiv>
+        </MediterraneanChickpeaDiv>
 
-//   const handleSelect = (option: string) => {
-//     setSelected((prev) => (prev === option ? "" : option));
-//     if (closeOnSelect) setOpen(false);
-//   };
+        <MediterraneanChickpeaDiv>
+          <MediterraneanImage src={GreekImg}></MediterraneanImage>
+          <MediterraneanTextDiv>
+            <HeadingText>Greek Yogurt Berry Parfait </HeadingText>
+            <MediterraneanParagrah>
+              Layers of creamy yogurt, fresh berries and <br /> crunchy oats for
+              a high-protein snack.
+              <MediterraneanTextImgDiv>
+                <PrepAndServingDiv>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <Servings2Img />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Servings: 1</Servings2Text>
+                  </ServingsContainer>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <PrepTime />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Prep: 5 mins</Servings2Text>
+                  </ServingsContainer>
+                </PrepAndServingDiv>
+                <CookContainer>
+                  <Servings2ImgDiv>
+                    <Cook />
+                  </Servings2ImgDiv>
+                  <Servings2Text>Cook: 0 min</Servings2Text>
+                </CookContainer>
+              </MediterraneanTextImgDiv>
+            </MediterraneanParagrah>{" "}
+            <ViewRecipe>View Recipe</ViewRecipe>
+          </MediterraneanTextDiv>
+        </MediterraneanChickpeaDiv>
+      </MediterraneContainer>
 
-//   const clearAll = () => {
-//     setSelected("");
-//     setOpen(false);
-//   };
+      <MediterraneContainer>
+        <MediterraneanChickpea>
+          <MediterraneanImage src={LentilImg}></MediterraneanImage>
+          <MediterraneanTextDiv>
+            <HeadingText>Quinoa Veggie Power Bowl</HeadingText>
+            <MediterraneanParagrah>
+              A balanced bowl of fluffy quinoa, roasted veggies <br /> and
+              healthy fats.
+              <MediterraneanTextImgDiv>
+                <PrepAndServingDiv>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <Servings2Img />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Servings: 2</Servings2Text>
+                  </ServingsContainer>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <PrepTime />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Prep: 10 mins</Servings2Text>
+                  </ServingsContainer>
+                </PrepAndServingDiv>
+                <CookContainer>
+                  <Servings2ImgDiv>
+                    <Cook />
+                  </Servings2ImgDiv>
+                  <Servings2Text>Cook: 20 min</Servings2Text>
+                </CookContainer>
+              </MediterraneanTextImgDiv>
+            </MediterraneanParagrah>{" "}
+            <ViewRecipe>View Recipe</ViewRecipe>
+          </MediterraneanTextDiv>
+        </MediterraneanChickpea>
 
-//   return (
-//     <Container ref={containerRef}>
-//       <ToggleButton onClick={() => setOpen((s) => !s)}>{label} ▾</ToggleButton>
-
-//       {open && (
-//         <DropdownList role="menu" aria-label={label}>
-//           {options.map((option) => (
-//             <Label key={option}>
-//               <Input
-//                 type="radio"
-//                 name={nameRef.current}
-//                 checked={selected === option}
-//                 onChange={() => handleSelect(option)}
-//               />
-//               {option}
-//             </Label>
-//           ))}
-
-//           {selected && <ClearButton onClick={clearAll}>Clear</ClearButton>}
-//         </DropdownList>
-//       )}
-//     </Container>
-//   );
-// }
+        <MediterraneanChickpea>
+          <MediterraneanImage src={BananaImg}></MediterraneanImage>
+          <MediterraneanTextDiv>
+            <HeadingText>Sweet Potato Black Bean Tacos</HeadingText>
+            <MediterraneanParagrah>
+              Smoky roasted sweet potatoes and black beans <br /> tucked into
+              warm tortillas.
+              <MediterraneanTextImgDiv>
+                <PrepAndServingDiv>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <Servings2Img />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Servings: 2</Servings2Text>
+                  </ServingsContainer>
+                  <ServingsContainer>
+                    <Servings2ImgDiv>
+                      <PrepTime />
+                    </Servings2ImgDiv>
+                    <Servings2Text>Prep: 5 mins</Servings2Text>
+                  </ServingsContainer>
+                </PrepAndServingDiv>
+                <CookContainer>
+                  <Servings2ImgDiv>
+                    <Cook />
+                  </Servings2ImgDiv>
+                  <Servings2Text>Cook: 10 min</Servings2Text>
+                </CookContainer>
+              </MediterraneanTextImgDiv>
+            </MediterraneanParagrah>{" "}
+            <ViewRecipe>View Recipe</ViewRecipe>
+          </MediterraneanTextDiv>
+        </MediterraneanChickpea>
+      </MediterraneContainer>
+    </FoodContainer>
+  );
+}
