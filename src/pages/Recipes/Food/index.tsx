@@ -27,8 +27,8 @@ import LentilImg from "../../../assets/images/lentil-soup-large.webp";
 import BananaImg from "../../../assets/images/banana-pancakes-large.webp";
 import { ViewRecipe } from "../../../components/Button/style";
 // import RecipesDetails from "../RecipesDetails";
-import { Route, Routes } from "react-router-dom";
-import ViewDetails from "../../RecipesDetails";
+// import { Route, Routes } from "react-router-dom";
+// import ViewDetails from "../../RecipesDetails";
 
 export default function FoodCode() {
   return (
