@@ -3,9 +3,14 @@ import { ButtonContainer, ViewRecipe } from "./style";
 
 interface ButtonProps {
   children: String;
+  onClick?: () => void;
 }
 
-export default function Button({ children }: ButtonProps) {
-  return <ButtonContainer type="button">{children}</ButtonContainer>;
+export default function Button({ children, onClick }: ButtonProps) {
+  return (
+    <ButtonContainer type="button" onClick={onClick}>
+      {children}
+    </ButtonContainer>
+  );
   return <ViewRecipe type="button">{children}</ViewRecipe>;
 }

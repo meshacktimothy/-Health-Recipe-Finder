@@ -9,5 +9,3 @@ export const HeadingTextOne = styled.p`
   color: ${colors.secondary01};
 `;
 // export const MoreRecipesContainer = styled.div``;
-// export const MoreRecipesContainer = styled.div``;
-// export const MoreRecipesContainer = styled.div``;

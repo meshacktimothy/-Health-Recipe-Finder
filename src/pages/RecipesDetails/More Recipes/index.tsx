@@ -73,7 +73,7 @@ export default function index() {
                   </CookContainer>
                 </MediterraneanTextImgDiv>
               </MediterraneanParagrah>{" "}
-              <ViewRecipe onClick={handleView}>View Recipe</ViewRecipe>
+              <ViewRecipe>View Recipe</ViewRecipe>
             </MediterraneanTextDiv>
           </MediterraneanChickpeaDiv>
 
@@ -109,7 +109,7 @@ export default function index() {
                   </CookContainer>
                 </MediterraneanTextImgDiv>
               </MediterraneanParagrah>{" "}
-              <ViewRecipe onClick={handleView}>View Recipe</ViewRecipe>
+              <ViewRecipe>View Recipe</ViewRecipe>
             </MediterraneanTextDiv>
           </MediterraneanChickpeaDiv>
 
@@ -143,7 +143,7 @@ export default function index() {
                   </CookContainer>
                 </MediterraneanTextImgDiv>
               </MediterraneanParagrah>
-              <ViewRecipe onClick={handleView}>View Recipe</ViewRecipe>
+              <ViewRecipe>View Recipe</ViewRecipe>
             </MediterraneanTextDiv>
           </MediterraneanChickpeaDiv>
         </MediterraneContainer>
