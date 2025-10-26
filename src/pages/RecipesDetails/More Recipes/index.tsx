@@ -14,7 +14,6 @@ import {
 } from "../../Recipes/Food/styles";
 import { ServingsContainer } from "../Hero/styles";
 import { MoreRecipesContainer, HeadingTextOne } from "./style";
-import { useNavigate } from "react-router-dom";
 import AvocadoImg from "../../../assets/images/avocado-tomato-wholegrain-toast-large.webp";
 import OnePan from "../../../assets/images/salmon-asparagus-large.webp";
 import Quinoa from "../../../assets/images/quinoa-veggie-bowl-large.webp";
@@ -32,11 +31,6 @@ import Bluesky from "../../../assets/images/icon-bluesky.svg";
 import Tiktok from "../../../assets/images/icon-tiktok.svg";
 
 export default function index() {
-  const navigate = useNavigate();
-  function handleView() {
-    navigate("view");
-  }
-
   return (
     <>
       <MoreRecipesContainer>
