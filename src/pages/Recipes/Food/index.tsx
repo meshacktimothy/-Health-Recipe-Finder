@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
   FoodContainer,
   MediterraneanChickpeaDiv,
@@ -31,6 +32,10 @@ import { ViewRecipe } from "../../../components/Button/style";
 // import ViewDetails from "../../RecipesDetails";
 
 export default function FoodCode() {
+  const navigate = useNavigate();
+  function handleView() {
+    navigate("/view");
+  }
   return (
     <FoodContainer>
       <MediterraneContainer>
@@ -64,7 +69,7 @@ export default function FoodCode() {
                 </CookContainer>
               </MediterraneanTextImgDiv>
             </MediterraneanParagrah>
-            <ViewRecipe>View Recipe</ViewRecipe>
+            <ViewRecipe onClick={handleView}>View Recipe</ViewRecipe>
           </MediterraneanTextDiv>
         </MediterraneanChickpeaDiv>
 
@@ -98,7 +103,7 @@ export default function FoodCode() {
                 </CookContainer>
               </MediterraneanTextImgDiv>
             </MediterraneanParagrah>{" "}
-            <ViewRecipe>View Recipe</ViewRecipe>
+            <ViewRecipe onClick={handleView}>View Recipe</ViewRecipe>
           </MediterraneanTextDiv>
         </MediterraneanChickpeaDiv>
 
@@ -134,7 +139,7 @@ export default function FoodCode() {
                 </CookContainer>
               </MediterraneanTextImgDiv>
             </MediterraneanParagrah>{" "}
-            <ViewRecipe>View Recipe</ViewRecipe>
+            <ViewRecipe onClick={handleView}>View Recipe</ViewRecipe>
           </MediterraneanTextDiv>
         </MediterraneanChickpeaDiv>
       </MediterraneContainer>
@@ -170,7 +175,7 @@ export default function FoodCode() {
                 </CookContainer>
               </MediterraneanTextImgDiv>
             </MediterraneanParagrah>{" "}
-            <ViewRecipe>View Recipe</ViewRecipe>
+            <ViewRecipe onClick={handleView}>View Recipe</ViewRecipe>
           </MediterraneanTextDiv>
         </MediterraneanChickpeaDiv>
 
@@ -204,7 +209,7 @@ export default function FoodCode() {
                 </CookContainer>
               </MediterraneanTextImgDiv>
             </MediterraneanParagrah>{" "}
-            <ViewRecipe>View Recipe</ViewRecipe>
+            <ViewRecipe onClick={handleView}>View Recipe</ViewRecipe>
           </MediterraneanTextDiv>
         </MediterraneanChickpeaDiv>
 
@@ -238,7 +243,7 @@ export default function FoodCode() {
                 </CookContainer>
               </MediterraneanTextImgDiv>
             </MediterraneanParagrah>{" "}
-            <ViewRecipe>View Recipe</ViewRecipe>
+            <ViewRecipe onClick={handleView}>View Recipe</ViewRecipe>
           </MediterraneanTextDiv>
         </MediterraneanChickpeaDiv>
       </MediterraneContainer>
@@ -274,10 +279,9 @@ export default function FoodCode() {
                 </CookContainer>
               </MediterraneanTextImgDiv>
             </MediterraneanParagrah>{" "}
-            <ViewRecipe>View Recipe</ViewRecipe>
+            <ViewRecipe onClick={handleView}>View Recipe</ViewRecipe>
           </MediterraneanTextDiv>
         </MediterraneanChickpea>
-
         <MediterraneanChickpea>
           <MediterraneanImage src={BananaImg}></MediterraneanImage>
           <MediterraneanTextDiv>
@@ -308,7 +312,7 @@ export default function FoodCode() {
                 </CookContainer>
               </MediterraneanTextImgDiv>
             </MediterraneanParagrah>{" "}
-            <ViewRecipe>View Recipe</ViewRecipe>
+            <ViewRecipe onClick={handleView}>View Recipe</ViewRecipe>
           </MediterraneanTextDiv>
         </MediterraneanChickpea>
       </MediterraneContainer>

@@ -30,8 +30,8 @@ export const MediterraneanImage = styled.img`
 `;
 export const MediterraneanTextDiv = styled.div``;
 export const HeadingText = styled.p`
-  font-weight: 500;
-  font-size: 17px;
+  font-weight: bold;
+  font-size: 16px;
   letter-spacing: -0.5px;
   color: ${colors.primary01};
   margin: 10px 0px;
@@ -65,6 +65,7 @@ export const PrepAndServingDiv = styled.div`
 export const CookContainer = styled.div`
   display: flex;
   margin-top: 5px;
+  gap: 10px;
 `;
 export const MediterraneContainer = styled.div`
   gap: 30px;
